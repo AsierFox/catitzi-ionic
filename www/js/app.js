@@ -40,6 +40,7 @@ angular.module('catitzi', ['ionic', 'controllers', 'directives', 'services'])
 
             .state('tab.chats', {
                 url: '/chats',
+                cache: false,
                 views: {
                     'tab-chats': {
                         templateUrl: 'templates/tab-chats.html',

@@ -1,20 +1,37 @@
 <ion-view view-title="Cats">
 
   <ion-nav-buttons side="right">
-    <i class="icon ion-refresh header-refresh-button" ng-click="getCats()"></i>
+    <i class="icon ion-refresh header-refresh-button" ng-click="loadMoreCats(true)"></i>
   </ion-nav-buttons>
 
   <ion-content>
 
-    <ion-list>
+    <div class="cat-galley">
       <div class="bounce-in cat-card"
            ng-repeat="cat in cats"
            href="#/tab/chats/{{ cat.id }}">
 
-        <img ng-src="{{ cat.url }}">
+        <img ng-src="{{ cat.url }}" ng-click="openModal(cat)">
 
       </div>
-    </ion-list>
+    </div>
+
+    <ion-infinite-scroll
+            on-infinite="loadMoreCats()"
+            distance="5%">
+    </ion-infinite-scroll>
+
+    <script id="my-modal.html" type="text/ng-template">
+      <ion-modal-view style="background-color: #ffc0cb">
+        <ion-header-bar>
+          <i class="icon ion-ios-arrow-back header-refresh-button" ng-click="closeModal()"></i>
+          <h1 class="title">Cat</h1>
+        </ion-header-bar>
+        <ion-content>
+          <img ng-src="{{ selectedCat.url }}" style="width: 100%">
+        </ion-content>
+      </ion-modal-view>
+    </script>
 
   </ion-content>
 </ion-view>
