@@ -1,1 +1,12 @@
-# Created by .ignore support plugin (hsz.mobi)
+.idea
+node_modules
+.tmp
+.sass-cache
+bower_components
+coverage
+platforms
+plugins
+*.swp
+*.swo
+*.log
+*.DS_Store
