@@ -1,7 +1,19 @@
-<ion-view view-title="Account">
+<ion-view view-title="Citas">
+
+  <ion-nav-buttons side="right">
+    <i class="icon ion-refresh header-refresh-button" ng-click="getQuote()"></i>
+  </ion-nav-buttons>
+
   <ion-content>
 
-    Cats
+    <div class="card">
+      <div class="item item-divider">
+        {{ quote.quoteAuthor }}
+      </div>
+      <div class="item item-text-wrap">
+        {{ quote.quoteText }}
+      </div>
+    </div>
 
   </ion-content>
 </ion-view>

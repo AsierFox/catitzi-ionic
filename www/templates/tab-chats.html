@@ -1,17 +1,20 @@
-<ion-view view-title="Chats">
-  <ion-content>
-    <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right bounce-in" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-        
-        <img ng-src="{{chat.face}}">
-        <h2>{{chat.name}}</h2>
-        <p>{{chat.lastText}}</p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
+<ion-view view-title="Cats">
 
-        <ion-option-button class="button-assertive" ng-click="remove(chat)">
-          Delete
-        </ion-option-button>
-      </ion-item>
+  <ion-nav-buttons side="right">
+    <i class="icon ion-refresh header-refresh-button" ng-click="getCats()"></i>
+  </ion-nav-buttons>
+
+  <ion-content>
+
+    <ion-list>
+      <div class="bounce-in cat-card"
+           ng-repeat="cat in cats"
+           href="#/tab/chats/{{ cat.id }}">
+
+        <img ng-src="{{ cat.url }}">
+
+      </div>
     </ion-list>
+
   </ion-content>
 </ion-view>
