@@ -22,7 +22,7 @@ angular.module('controllers', [])
     $scope.cats = [];
     $scope.loadMoreCats = loadMoreCats;
 
-    $ionicModal.fromTemplateUrl('my-modal.html', {
+    $ionicModal.fromTemplateUrl('cat-modal.html', {
         scope: $scope,
         animation: 'slide-in-up'
     }).then(function(modal) {
