@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.devdream.catitzii" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.devdream.catitzii" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Cat Itzi</name>
   <description>
-        Awesome app!
+        Cats app!
     </description>
   <author email="asigonlo@gmail.com" href="http://devdream.es/">
-      Your Name Here
+      Asier González
     </author>
   <content src="index.html"/>
   <access origin="*"/>

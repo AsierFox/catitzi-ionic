@@ -1,4 +1,4 @@
-angular.module('catitzi', ['ionic', 'controllers', 'directives', 'services'])
+angular.module('catitzi', ['ionic', 'controllers', 'directives'])
 
     .constant('TweenMax', TweenMax)
 
